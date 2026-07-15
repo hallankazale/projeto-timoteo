@@ -1,0 +1,20 @@
+.part-bottom-nav{margin:28px 0 10px;padding:18px;border-radius:26px;background:linear-gradient(180deg,#ffffff 0%,#f4f9fc 100%);border:1px solid #d7e6ed;box-shadow:0 14px 32px rgba(16,59,102,.12)}
+.part-complete-note{display:flex;align-items:center;gap:12px;text-align:left;margin-bottom:16px;padding:12px 14px;border-radius:18px;background:#e8f7ee;color:#1e6942}
+.part-complete-note>span{width:34px;height:34px;border-radius:12px;display:grid;place-items:center;background:#ccebd8;font-size:1rem;font-weight:900;flex:0 0 34px}
+.part-complete-note div{display:flex;flex-direction:column;gap:2px}
+.part-complete-note strong{font-size:.88rem;line-height:1.1}
+.part-complete-note small{font-size:.7rem;color:#4d7b62;font-weight:700}
+.part-bottom-actions{display:flex;flex-direction:column;gap:10px}
+.part-secondary-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.part-nav-btn{width:100%;border:0;border-radius:17px;min-height:54px;padding:12px 14px;font-family:'DM Sans',sans-serif;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;transition:transform .18s ease,box-shadow .18s ease,opacity .18s ease;-webkit-tap-highlight-color:transparent}
+.part-nav-btn:active{transform:scale(.98)}
+.part-nav-btn span{font-size:1rem;line-height:1}
+.part-nav-btn strong{font-size:.82rem;line-height:1.15}
+.part-nav-btn.next-main{min-height:62px;flex-direction:column;gap:3px;background:linear-gradient(135deg,#103b66,#287ea3);color:#fff;box-shadow:0 12px 24px rgba(16,59,102,.24)}
+.part-nav-btn.next-main span{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;opacity:.78}
+.part-nav-btn.next-main strong{font-size:1rem}
+.part-nav-btn.secondary{background:#eaf3f7;color:#173f5e;border:1px solid #cfe0e8}
+.part-nav-btn.menu{background:#fff6d6;color:#6f5600;border:1px solid #eed87c}
+.part-nav-btn:disabled{opacity:.42;box-shadow:none;cursor:not-allowed}
+@media(max-width:350px){.part-secondary-row{grid-template-columns:1fr}.part-nav-btn{min-height:50px}.part-nav-btn.next-main{min-height:58px}}
+@media print{.part-bottom-nav{display:none!important}}
