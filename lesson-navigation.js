@@ -27,16 +27,27 @@
   }
 
   function navHtml(index, total) {
-    const prev = index > 0
-      ? `<button class="part-nav-btn secondary" data-part-prev="${index - 1}">← Parte anterior</button>`
-      : '<span></span>';
-    const next = index < total - 1
-      ? `<button class="part-nav-btn primary" data-part-next="${index + 1}">${LABELS[index + 1] || 'Próxima parte'} →</button>`
-      : '<button class="part-nav-btn primary" data-finish-lesson>✓ Concluir lição</button>';
+    const isFirst = index === 0;
+    const isLast = index === total - 1;
+    const nextLabel = LABELS[index + 1] || 'Próxima parte';
+
+    const mainAction = isLast
+      ? '<button class="part-nav-btn primary next-main" data-finish-lesson><span>✓</span><strong>Concluir esta lição</strong></button>'
+      : `<button class="part-nav-btn primary next-main" data-part-next="${index + 1}"><span>Continuar</span><strong>${nextLabel} →</strong></button>`;
+
+    const previousAction = isFirst
+      ? '<button class="part-nav-btn secondary previous-btn" disabled><span>←</span><strong>Parte anterior</strong></button>'
+      : `<button class="part-nav-btn secondary previous-btn" data-part-prev="${index - 1}"><span>←</span><strong>Parte anterior</strong></button>`;
 
     return `<div class="part-bottom-nav">
-      <div class="part-complete-note">✓ Você chegou ao final desta parte</div>
-      <div class="part-bottom-actions">${prev}<button class="part-nav-btn menu" data-lesson-menu>☰ Menu da lição</button>${next}</div>
+      <div class="part-complete-note"><span>✓</span><div><strong>Parte finalizada</strong><small>Continue para avançar na lição</small></div></div>
+      <div class="part-bottom-actions">
+        ${mainAction}
+        <div class="part-secondary-row">
+          ${previousAction}
+          <button class="part-nav-btn menu menu-btn" data-lesson-menu><span>☰</span><strong>Menu da lição</strong></button>
+        </div>
+      </div>
     </div>`;
   }
 
@@ -53,7 +64,8 @@
     }
 
     pages.forEach((page, index) => {
-      if (!page.querySelector('.part-bottom-nav')) page.insertAdjacentHTML('beforeend', navHtml(index, pages.length));
+      page.querySelector('.part-bottom-nav')?.remove();
+      page.insertAdjacentHTML('beforeend', navHtml(index, pages.length));
     });
 
     tabs.forEach((tab, index) => {
@@ -72,7 +84,7 @@
       if (finish) {
         const lessonNumber = reader.querySelector('.reader-top small')?.textContent?.match(/\d+/)?.[0] || '0';
         localStorage.setItem(`lesson-${lessonNumber}`, 'done');
-        finish.textContent = '🎉 Lição concluída!';
+        finish.innerHTML = '<span>🎉</span><strong>Lição concluída!</strong>';
         finish.disabled = true;
       }
     });
