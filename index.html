@@ -1,151 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Projeto Timóteo - Revista do Aluno" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#174f7a">
   <title>Projeto Timóteo</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div>
-      <p class="eyebrow">Revista do Aluno</p>
-      <h1>Projeto Timóteo</h1>
-      <p class="subtitle">Discipulado, fé e crescimento cristão</p>
+<header class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <span class="badge">Escola de Discipulado</span>
+    <h1>Projeto Timóteo</h1>
+    <p>Conheça a Palavra. Viva a Palavra. Ensine a Palavra.</p>
+    <div class="hero-actions">
+      <button class="primary" data-open="1">Começar jornada</button>
+      <button class="secondary" onclick="window.print()">Salvar em PDF</button>
     </div>
-    <button class="print-button" onclick="window.print()">Imprimir / Salvar em PDF</button>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <section class="intro-card">
-      <h2>Volume 1</h2>
-      <p>Material de discipulado organizado em lições, preservando a mesma identidade visual em todas as partes.</p>
-    </section>
+<main class="app-shell">
+  <section class="welcome">
+    <div><span class="mini-label">Revista do Aluno • Volume 1</span><h2>Sua jornada de crescimento</h2></div>
+    <div class="progress-ring"><strong>4</strong><span>lições</span></div>
+  </section>
 
-    <nav class="lesson-menu" aria-label="Lições do Projeto Timóteo">
-      <a href="#licao-1">Lição 1</a>
-      <a href="#licao-2">Lição 2</a>
-      <a href="#licao-3">Lição 3</a>
-      <a class="active" href="#licao-4">Lição 4</a>
-      <a href="#licao-5">Lição 5</a>
-    </nav>
+  <nav class="tabs" aria-label="Escolha uma lição">
+    <button class="tab active" data-tab="1"><span>01</span>Salvação</button>
+    <button class="tab" data-tab="2"><span>02</span>Bíblia</button>
+    <button class="tab" data-tab="3"><span>03</span>Oração</button>
+    <button class="tab" data-tab="4"><span>04</span>Igreja</button>
+  </nav>
 
-    <section class="coming-soon" id="licao-1">
-      <h2>Lição 1 – O Plano da Salvação</h2>
-      <p>Conteúdo será acrescentado nesta página.</p>
-    </section>
-
-    <section class="coming-soon" id="licao-2">
-      <h2>Lição 2 – A Bíblia: A Palavra de Deus</h2>
-      <p>Conteúdo será acrescentado nesta página.</p>
-    </section>
-
-    <section class="coming-soon" id="licao-3">
-      <h2>Lição 3 – A Oração</h2>
-      <p>Conteúdo será acrescentado nesta página.</p>
-    </section>
-
-    <article class="lesson" id="licao-4">
-      <section class="page sheet">
-        <div class="lesson-number">LIÇÃO 4</div>
-        <h2>A IGREJA E A COMUNHÃO CRISTÃ</h2>
-
-        <div class="student-box light-blue">
-          <div><strong>Data da Aula:</strong> ____/____/______</div>
-          <div><strong>Professor(a):</strong> ______________________________</div>
-          <div><strong>Aluno(a):</strong> _________________________________</div>
-          <div><strong>Presença:</strong> ( ) Presente &nbsp;&nbsp; ( ) Ausente</div>
-        </div>
-
-        <section class="prayer-request">
-          <h3>Pedido de Oração</h3>
-          <div class="line"></div>
-          <div class="line"></div>
-        </section>
-
-        <section class="golden-text yellow-box">
-          <h3>📖 TEXTO-ÁUREO</h3>
-          <blockquote>“Assim nós, que somos muitos, somos um só corpo em Cristo e membros uns dos outros.”</blockquote>
-          <p><strong>Romanos 12:5</strong></p>
-        </section>
-
-        <section class="objectives">
-          <h3>Objetivos da Lição</h3>
-          <ul>
-            <li>Compreender o que é a Igreja de Cristo.</li>
-            <li>Entender a importância da comunhão entre os irmãos.</li>
-            <li>Desenvolver o compromisso de participar da vida da igreja.</li>
-            <li>Valorizar a unidade do Corpo de Cristo.</li>
-          </ul>
-        </section>
-
-        <section class="learning-list">
-          <h3>NESTA LIÇÃO VOCÊ APRENDERÁ</h3>
-          <ol>
-            <li><strong>4.1</strong> O que é a Igreja?</li>
-            <li><strong>4.2</strong> A Igreja como Corpo de Cristo.</li>
-            <li><strong>4.3</strong> A importância da comunhão cristã.</li>
-            <li><strong>4.4</strong> Os benefícios de congregar.</li>
-            <li><strong>4.5</strong> Servindo uns aos outros com amor.</li>
-            <li><strong>4.6</strong> Vivendo em unidade.</li>
-          </ol>
-        </section>
-
-        <section class="weekly-reading">
-          <h3>Leitura Bíblica da Semana</h3>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Dia</th><th>Leitura</th><th>Li</th><th>Orei</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Segunda</td><td>Atos 2:42-47</td><td>( )</td><td>( )</td></tr>
-                <tr><td>Terça</td><td>Hebreus 10:24-25</td><td>( )</td><td>( )</td></tr>
-                <tr><td>Quarta</td><td>Efésios 4:1-6</td><td>( )</td><td>( )</td></tr>
-                <tr><td>Quinta</td><td>Romanos 12:4-5</td><td>( )</td><td>( )</td></tr>
-                <tr><td>Sexta</td><td>1 Coríntios 12:12-27</td><td>( )</td><td>( )</td></tr>
-                <tr><td>Sábado</td><td>Salmo 133</td><td>( )</td><td>( )</td></tr>
-                <tr><td>Domingo</td><td>João 13:34-35</td><td>( )</td><td>( )</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <p class="continuation">Continuação da Lição 4 – Parte 1 na próxima página.</p>
-      </section>
-
-      <section class="page sheet continuation-page">
-        <p class="continuation-title">Continuação da LIÇÃO 4 – Parte 1</p>
-        <h2>A IGREJA E A COMUNHÃO CRISTÃ</h2>
-
-        <section class="introduction">
-          <h3>Introdução</h3>
-          <p>A Igreja não é apenas um prédio onde as pessoas se reúnem. A verdadeira Igreja é formada por todos aqueles que receberam Jesus Cristo como Salvador. Deus nos chamou para vivermos em comunhão, adorando ao Senhor, aprendendo Sua Palavra e servindo uns aos outros com amor. Quando permanecemos unidos, crescemos espiritualmente e fortalecemos nossa fé.</p>
-        </section>
-
-        <section class="did-you-know green-box">
-          <h3>💡 VOCÊ SABIA?</h3>
-          <p>A palavra <strong>“igreja”</strong> vem do termo grego <strong><em>ekklesia</em></strong>, que significa <strong>“os chamados para fora”</strong> ou <strong>“assembleia dos chamados”</strong>. Na Bíblia, igreja não é apenas um prédio, mas o conjunto de pessoas chamadas por Deus para viver em comunhão com Cristo.</p>
-          <p>Por isso, participar da igreja é tão importante. É na comunhão com os irmãos que crescemos na fé, aprendemos a Palavra de Deus, adoramos ao Senhor, servimos uns aos outros e somos encorajados a permanecer firmes na caminhada cristã.</p>
-          <blockquote>“Não deixemos de congregar-nos...” <strong>Hebreus 10:25</strong></blockquote>
-        </section>
-
-        <div class="footer-symbols" aria-hidden="true">
-          <span>📖</span>
-          <span>✝</span>
-        </div>
-      </section>
+  <section class="lesson-panel active" id="lesson-1">
+    <div class="lesson-cover cover-1"><div><small>LIÇÃO 1</small><h2>O Plano da Salvação</h2><p>O amor de Deus revelado em Jesus Cristo.</p></div><span>❤</span></div>
+    <article class="sheet">
+      <div class="student-box"><span>Data: ____/____/____</span><span>Professor(a): __________________</span><span>Aluno(a): ____________________</span><span>Presença: ( ) P ( ) A</span></div>
+      <h3>Pedido de Oração</h3><div class="write-line"></div><div class="write-line"></div>
+      <section class="gold-box"><b>Texto-Áureo</b><blockquote>“Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito...”</blockquote><strong>João 3:16</strong></section>
+      <h3>Objetivos da Lição</h3>
+      <ul><li>Compreender o plano da salvação revelado por Deus.</li><li>Reconhecer que todos necessitam da salvação.</li><li>Entender que Jesus Cristo é o único Salvador.</li><li>Saber como receber a salvação pela fé.</li></ul>
+      <details open><summary>Leitura Bíblica da Semana</summary><div class="table-scroll"><table><thead><tr><th>Dia</th><th>Leitura</th><th>Li</th><th>Orei</th></tr></thead><tbody><tr><td>Segunda</td><td>João 3</td><td>□</td><td>□</td></tr><tr><td>Terça</td><td>Romanos 3</td><td>□</td><td>□</td></tr><tr><td>Quarta</td><td>Romanos 5</td><td>□</td><td>□</td></tr><tr><td>Quinta</td><td>Efésios 2</td><td>□</td><td>□</td></tr><tr><td>Sexta</td><td>Isaías 53</td><td>□</td><td>□</td></tr><tr><td>Sábado</td><td>Lucas 15</td><td>□</td><td>□</td></tr><tr><td>Domingo</td><td>João 10</td><td>□</td><td>□</td></tr></tbody></table></div></details>
+      <details><summary>Introdução</summary><p>O plano da salvação é a maior demonstração do amor de Deus pela humanidade. O pecado rompeu a comunhão com Deus, mas Jesus Cristo morreu e ressuscitou para oferecer perdão, reconciliação e vida eterna. A salvação é um presente da graça, recebido pela fé.</p></details>
+      <div class="green-box"><b>Para guardar no coração</b><p>A salvação não é o fim da caminhada cristã. É o começo de uma nova vida com Cristo.</p></div>
     </article>
+  </section>
 
-    <section class="coming-soon" id="licao-5">
-      <h2>Lição 5 – O Batismo nas Águas</h2>
-      <p>Conteúdo será acrescentado nesta página.</p>
-    </section>
-  </main>
+  <section class="lesson-panel" id="lesson-2">
+    <div class="lesson-cover cover-2"><div><small>LIÇÃO 2</small><h2>A Bíblia: A Palavra de Deus</h2><p>A verdade que ilumina, ensina e transforma.</p></div><span>📖</span></div>
+    <article class="sheet">
+      <div class="student-box"><span>Data: ____/____/____</span><span>Professor(a): __________________</span><span>Aluno(a): ____________________</span><span>Presença: ( ) P ( ) A</span></div>
+      <h3>Pedido de Oração</h3><div class="write-line"></div><div class="write-line"></div>
+      <section class="gold-box"><b>Texto-Áureo</b><blockquote>“Toda a Escritura é inspirada por Deus e útil para o ensino...”</blockquote><strong>2 Timóteo 3:16</strong></section>
+      <h3>Objetivos da Lição</h3><ul><li>Compreender que a Bíblia é a Palavra inspirada por Deus.</li><li>Conhecer sua importância para a vida cristã.</li><li>Desenvolver o hábito da leitura diária.</li><li>Reconhecer a Bíblia como regra de fé e prática.</li></ul>
+      <details open><summary>Leitura Bíblica da Semana</summary><div class="table-scroll"><table><thead><tr><th>Dia</th><th>Leitura</th><th>Li</th><th>Orei</th></tr></thead><tbody><tr><td>Segunda</td><td>Salmo 119:105</td><td>□</td><td>□</td></tr><tr><td>Terça</td><td>2 Timóteo 3:16-17</td><td>□</td><td>□</td></tr><tr><td>Quarta</td><td>Hebreus 4:12</td><td>□</td><td>□</td></tr><tr><td>Quinta</td><td>Josué 1:8</td><td>□</td><td>□</td></tr><tr><td>Sexta</td><td>Salmo 1:1-3</td><td>□</td><td>□</td></tr><tr><td>Sábado</td><td>João 5:39</td><td>□</td><td>□</td></tr><tr><td>Domingo</td><td>Mateus 7:24-27</td><td>□</td><td>□</td></tr></tbody></table></div></details>
+      <details><summary>Introdução</summary><p>A Bíblia é a Palavra de Deus revelada à humanidade. Nela conhecemos o caráter de Deus, o plano da salvação e os ensinamentos necessários para uma vida de comunhão com o Senhor.</p></details>
+      <div class="green-box"><b>Você sabia?</b><p>Durante a Reforma Protestante, Martinho Lutero traduziu a Bíblia para o alemão usando principalmente os textos originais em hebraico e grego, tornando as Escrituras mais acessíveis ao povo.</p></div>
+    </article>
+  </section>
 
-  <footer>
-    <p>Projeto Timóteo • Revista do Aluno</p>
-  </footer>
+  <section class="lesson-panel" id="lesson-3">
+    <div class="lesson-cover cover-3"><div><small>LIÇÃO 3</small><h2>A Oração</h2><p>Falando com Deus todos os dias.</p></div><span>🙏</span></div>
+    <article class="sheet">
+      <div class="student-box"><span>Data: ____/____/____</span><span>Professor(a): __________________</span><span>Aluno(a): ____________________</span><span>Presença: ( ) P ( ) A</span></div>
+      <h3>Pedido de Oração</h3><div class="write-line"></div><div class="write-line"></div>
+      <section class="gold-box"><b>Texto-Áureo</b><blockquote>“Orai sem cessar.”</blockquote><strong>1 Tessalonicenses 5:17</strong></section>
+      <h3>Objetivos da Lição</h3><ul><li>Compreender o que é a oração.</li><li>Reconhecer sua importância.</li><li>Desenvolver o hábito de orar.</li><li>Confiar que Deus ouve as orações.</li></ul>
+      <details open><summary>Nesta lição você aprenderá</summary><ol><li>O que é oração.</li><li>Por que devemos orar.</li><li>Como Jesus nos ensinou.</li><li>Como a oração fortalece a fé.</li><li>Como Deus responde.</li><li>Como viver em oração.</li></ol></details>
+      <details><summary>Leitura Bíblica da Semana</summary><div class="table-scroll"><table><thead><tr><th>Dia</th><th>Leitura</th></tr></thead><tbody><tr><td>Segunda</td><td>Mateus 6:5-8</td></tr><tr><td>Terça</td><td>Mateus 6:9-13</td></tr><tr><td>Quarta</td><td>Lucas 11:1-4</td></tr><tr><td>Quinta</td><td>Filipenses 4:6-7</td></tr><tr><td>Sexta</td><td>1 Tessalonicenses 5:17-18</td></tr><tr><td>Sábado</td><td>Tiago 5:16</td></tr><tr><td>Domingo</td><td>Salmo 145:18</td></tr></tbody></table></div></details>
+      <details><summary>Introdução</summary><p>A oração é um presente de Deus. Por meio dela conversamos com o Senhor, agradecemos, adoramos e apresentamos nossos pedidos. Jesus nos ensinou a viver uma vida de oração.</p></details>
+      <div class="green-box"><b>Você sabia?</b><p>George Müller ficou conhecido por sua vida de oração e por cuidar de milhares de crianças órfãs. Sua confiança em Deus inspirou muitas pessoas.</p></div>
+    </article>
+  </section>
+
+  <section class="lesson-panel" id="lesson-4">
+    <div class="lesson-cover cover-4"><div><small>LIÇÃO 4</small><h2>A Igreja e a Comunhão Cristã</h2><p>Unidos como um só corpo em Cristo.</p></div><span>⛪</span></div>
+    <article class="sheet">
+      <div class="student-box"><span>Data: ____/____/____</span><span>Professor(a): __________________</span><span>Aluno(a): ____________________</span><span>Presença: ( ) P ( ) A</span></div>
+      <h3>Pedido de Oração</h3><div class="write-line"></div><div class="write-line"></div>
+      <section class="gold-box"><b>Texto-Áureo</b><blockquote>“Assim nós, que somos muitos, somos um só corpo em Cristo e membros uns dos outros.”</blockquote><strong>Romanos 12:5</strong></section>
+      <h3>Objetivos da Lição</h3><ul><li>Compreender o que é a Igreja de Cristo.</li><li>Entender a importância da comunhão.</li><li>Participar da vida da igreja.</li><li>Valorizar a unidade do Corpo de Cristo.</li></ul>
+      <details open><summary>Nesta lição você aprenderá</summary><ol><li>O que é a Igreja.</li><li>A Igreja como Corpo de Cristo.</li><li>A importância da comunhão.</li><li>Os benefícios de congregar.</li><li>Servindo com amor.</li><li>Vivendo em unidade.</li></ol></details>
+      <details><summary>Leitura Bíblica da Semana</summary><div class="table-scroll"><table><thead><tr><th>Dia</th><th>Leitura</th><th>Li</th><th>Orei</th></tr></thead><tbody><tr><td>Segunda</td><td>Atos 2:42-47</td><td>□</td><td>□</td></tr><tr><td>Terça</td><td>Hebreus 10:24-25</td><td>□</td><td>□</td></tr><tr><td>Quarta</td><td>Efésios 4:1-6</td><td>□</td><td>□</td></tr><tr><td>Quinta</td><td>Romanos 12:4-5</td><td>□</td><td>□</td></tr><tr><td>Sexta</td><td>1 Coríntios 12:12-27</td><td>□</td><td>□</td></tr><tr><td>Sábado</td><td>Salmo 133</td><td>□</td><td>□</td></tr><tr><td>Domingo</td><td>João 13:34-35</td><td>□</td><td>□</td></tr></tbody></table></div></details>
+      <details><summary>Introdução</summary><p>A Igreja não é apenas um prédio. A verdadeira Igreja é formada por todos aqueles que receberam Jesus Cristo como Salvador. Deus nos chamou para viver em comunhão, aprender Sua Palavra e servir uns aos outros.</p></details>
+      <div class="green-box"><b>Você sabia?</b><p>A palavra igreja vem do grego <em>ekklesia</em>, “os chamados para fora”. Participar da igreja fortalece a fé, promove comunhão e nos ajuda a permanecer firmes na caminhada cristã.</p></div>
+    </article>
+  </section>
+</main>
+
+<nav class="bottom-nav" aria-label="Navegação móvel">
+  <button class="active" data-tab="1"><span>❤</span><small>Salvação</small></button>
+  <button data-tab="2"><span>📖</span><small>Bíblia</small></button>
+  <button data-tab="3"><span>🙏</span><small>Oração</small></button>
+  <button data-tab="4"><span>⛪</span><small>Igreja</small></button>
+</nav>
+<script src="script.js"></script>
 </body>
 </html>
